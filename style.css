@@ -220,7 +220,7 @@ p {
 .major__description {
   font-size: var(--font-small);
 }
-.job__logo_J {
+/* .job__logo_J {
   width: 15%;
 }
 .job__logo_H {
@@ -249,7 +249,7 @@ p {
 
 .job__period {
   font-size: var(--font-micro);
-}
+} */
 
 /* Skill */
 
