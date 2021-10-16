@@ -171,12 +171,12 @@ p {
 .section {
   padding: 50px;
   text-align: center;
-  margin: auto; /*centering*/
+  margin: auto; /*centering for all*/
 }
 
 .section__container {
   max-width: 1200px;
-  margin: auto;
+  margin: auto; /*centering for container*/
 }
 
 /* About */
@@ -243,7 +243,6 @@ p {
   background-color: var(--color-dark-grey);
   padding: 20px 40px;
 }
-
 .skill {
   margin-bottom: 32px;
 }
