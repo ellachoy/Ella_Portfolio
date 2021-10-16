@@ -171,7 +171,7 @@ p {
 .section {
   padding: 50px;
   text-align: center;
-  margin: auto;
+  margin: auto; /*centering*/
 }
 
 .section__container {
@@ -220,36 +220,6 @@ p {
 .major__description {
   font-size: var(--font-small);
 }
-/* .job__logo_J {
-  width: 15%;
-}
-.job__logo_H {
-  width: 20%;
-}
-.job {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.job__description {
-  margin: 0 16px;
-  text-align: left;
-}
-
-.job__name,
-.job__period {
-  color: var(--color-light-grey);
-  margin-left: 20px;
-}
-
-.job__name {
-  font-size: var(--font-small);
-}
-
-.job__period {
-  font-size: var(--font-micro);
-} */
 
 /* Skill */
 
