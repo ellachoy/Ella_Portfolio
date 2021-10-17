@@ -103,6 +103,7 @@ p {
   padding: 16px;
   /* background-color: var(--color-pink); */
   background-color: tranparent;
+  z-index: 1;
 }
 #navbar.navbar--dark {
   background-color: var(--color-pink);
