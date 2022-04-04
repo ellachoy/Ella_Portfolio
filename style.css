@@ -103,6 +103,8 @@ p {
   padding: 16px;
   /* background-color: var(--color-pink); */
   background-color: tranparent;
+  transition: all var(--animation-duration) ease-in-out;
+  /* navbar oben zu fixieren */
   z-index: 1;
 }
 #navbar.navbar--dark {
@@ -408,6 +410,7 @@ p {
 
 .testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
+  width: 80%;
 }
 
 .testimonial__avatar:nth-child(even) {
@@ -459,6 +462,26 @@ p {
   transform: scale(1.1);
   color: var(--color-yellow);
 }
+/* Scroll-arrow-up */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+/* .arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+} */
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {

@@ -1,12 +1,10 @@
 'use strict';
 
 // Make navbar transparent when it is on the top
-const navbar=document.querySelector('#navbar');
-const navbarHeight =navbar.getBoundingClientRect().height;
-document.addEventListener('scroll',()=>{
-// console.log(window.scrollY)// 스크롤이될떄마다 이벤트를 실행하도록 
-// console.log(`navbarHeight:${navbarHeight}`)
-if (window.scrollY > navbarHeight) {
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
   } else {
     navbar.classList.remove('navbar--dark');
@@ -16,17 +14,20 @@ if (window.scrollY > navbarHeight) {
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
-    // console.log(event.target)
+  // console.log(test);
+  // console.log(event.target);
+  // console.log(event.target.dataset.link);
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
- console.log(event.target.link);
- const scrollTo =document.querySelector(link);
- scrollTo.scrollIntoView({behavior: "smooth"})
-//   navbarMenu.classList.remove('open');
-//   scrollIntoView(link);
+  // console.log(event.target.dataset.link);
+
+  const scrollTo = document.querySelector(link);
+  // scrollTo.scrollIntoView({behavior:'smooth'});
+  // navbarMenu.classList.remove('open');
+  scrollIntoView(link);
 });
 
 // Navbar toggle button for small screen
@@ -38,10 +39,15 @@ navbarToggleBtn.addEventListener('click', () => {
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
-    const scrollTo = document.querySelector('#contact');
-    scrollTo.scrollIntoView({behavior: "smooth"});
-//   scrollIntoView('#contact');
+  // const scrollTo = document.querySelector('#contact');
+  // scrollTo.scrollIntoView({behavior:'smooth'});
+  scrollIntoView('#contact');
 });
+
+function scrollIntoview(selector){
+  const scrollTo = document.querySelector('#contact');
+  scrollTo.scrollIntoView({behavior:'smooth'});
+}
 
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
@@ -64,13 +70,13 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
 // Projects
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
-
-workBtnContainer.addEventListener('click', (event) => {
-  const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
   }
