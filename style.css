@@ -410,7 +410,7 @@ p {
 
 .testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
-  width: 80%;
+
 }
 
 .testimonial__avatar:nth-child(even) {
@@ -470,18 +470,21 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
-  color: var(--color-white);
+  /* color: var(--color-white); */
+  color:black;
   background-color: var(--color-pink);
   border-radius: 50%;
+  /* display:none; */
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms ease-in;
 }
 
-/* .arrow-up.visible {
+.arrow-up.visible {
+  /* display: block; */
   opacity: 1;
   pointer-events: auto;
-} */
+}
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
