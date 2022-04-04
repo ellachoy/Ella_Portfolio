@@ -408,7 +408,7 @@ p {
 
 .testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
-  width:83%;
+  width:40%;
 }
 
 .testimonial__avatar:nth-child(even) {
