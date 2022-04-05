@@ -299,6 +299,7 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   margin:2px 0;
+  position: relative;
 }
 
 .category__btn.active,
@@ -321,9 +322,11 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block; /* span이라  */
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   top: -20px;
-  left: 4px;
+  /* left: 4px; */
+  right: 16px;
   opacity: 0; /* 보이지않게  */
   transition: all var(--animation-duration) ease-in;
 }
@@ -333,6 +336,12 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   overflow-y: auto;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -345,7 +354,9 @@ p {
   margin: 5px;
   background-color: var(--color-light-white);
 }
-
+.project.invisible {
+  display: none;
+}
 .project__img {
   max-width: 100%;
   max-height: 100%;
@@ -373,7 +384,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -381,10 +392,12 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  /* width: 25px; */
+  width: 50px;
   height: 2px;
   margin-left: -12px;
   margin-top: 8px;
+  transform: translateX(-50%);
   background-color: var(--color-dark-white);
 }
 

@@ -14,22 +14,12 @@ document.addEventListener('scroll', () => {
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
-  // console.log(test);
-  // console.log(event.target);
-  // console.log(event.target.dataset.link);
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
-  // console.log(event.target.dataset.link);
   navbarMenu.classList.remove('open');
-  scrollIntoView(link);
-  
-
-  const scrollTo = document.querySelector(link);
-  // scrollTo.scrollIntoView({behavior:'smooth'});
-  // navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
 
@@ -42,15 +32,8 @@ navbarToggleBtn.addEventListener('click', () => {
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
-  // const scrollTo = document.querySelector('#contact');
-  // scrollTo.scrollIntoView({behavior:'smooth'});
   scrollIntoView('#contact');
 });
-
-function scrollIntoview(selector){
-  const scrollTo = document.querySelector('#contact');
-  scrollTo.scrollIntoView({behavior:'smooth'});
-}
 
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
@@ -92,17 +75,17 @@ workBtnContainer.addEventListener('click', (e) => {
   e.target.classList.add('selected');
 
   projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
+  // setTimeout(() => {
+  //   projects.forEach((project) => {
+  //     console.log(project.dataset.type);
+  //     if (filter === '*' || filter === project.dataset.type) {
+  //       project.classList.remove('invisible');
+  //     } else {
+  //       project.classList.add('invisible');
+  //     }
+  //   });
+  //   projectContainer.classList.remove('anim-out');
+  // }, 300);
 });
 
 function scrollIntoView(selector) {
