@@ -158,7 +158,7 @@ p {
 /* customizable snowflake styling */
 .snowflake {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: Arial;
   text-shadow: 0 0 1px #000;
 }
