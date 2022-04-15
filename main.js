@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
   new TypeIt('#title')
      .pause(1000)
-     .delete(10, { delay: 1000 })
+     .delete(15, { delay: 1000 })
      .type(' Dream Coder ')
      .go();
 });
