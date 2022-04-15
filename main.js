@@ -2,9 +2,9 @@
 // home title animation 
 document.addEventListener('DOMContentLoaded',()=>{
   new TypeIt('#title')
-     .pause(1000)
-     .delete(15, { delay: 1000 })
-     .type(' Dream Coder ')
+     .pause(500)
+     .delete(13, { delay: 1000 })
+     .type(' 안녕하세요! ')
      .go();
 });
 
