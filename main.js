@@ -1,18 +1,13 @@
-// 'use strict';
+'use strict';
+
 // home title animation 
 document.addEventListener('DOMContentLoaded',()=>{
   new TypeIt('#title')
      .pause(500)
-     .delete(10, { delay: 1000 })
+     .delete(4, { delay: 1000 })
      .type(' Dream Coder ')
      .go();
 });
-
-
-
-
-
-
 
 
 // Make navbar transparent when it is on the top
